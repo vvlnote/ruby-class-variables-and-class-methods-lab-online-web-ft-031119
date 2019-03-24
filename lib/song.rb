@@ -4,6 +4,7 @@ class Song
   @@genres = []
   @@artists = []
   @@genre_count = {}
+  @@artist_count = {}
   
   
   def initialize(song_name, artist_name, genre)
@@ -18,6 +19,8 @@ class Song
     else
       @@genre_count[genre] = 1
     end
+    
+    if @@artist_count.has_key?(artist_name)
   end
   
   def self.count
